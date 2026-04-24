@@ -83,7 +83,17 @@
   Estudio integral CAD $\cdot$ FEM $\cdot$ CAM $\cdot$ ML
   -- Aluminio 7075-T6}\\[0.8em]
 
-\imagenph{fig_01_render_isometrico.png}{0.40\textwidth}\\[0.8em]
+\begin{minipage}[t]{0.46\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{estribera_ref_S3_Hard_Rock.jpg}\\[0.3em]
+  {\small\color{gris}\textit{Referencia real: S3 Hard Rock}}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.46\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{fig_01_render_isometrico.png}\\[0.3em]
+  {\small\color{gris}\textit{Diseño CAD desarrollado en este proyecto}}
+\end{minipage}\\[0.8em]
 
 \bgroup
 \def\arraystretch{1.15}
@@ -260,6 +270,50 @@ de competición se mecanizan en aluminio de alta resistencia para reducir el pes
 comprometer la integridad estructural. Este proyecto plantea el diseño desde cero en
 FreeCAD, software libre, como demostración de sus capacidades frente a soluciones
 comerciales de pago.
+
+\subsection{Estribera de referencia: S3 Hard Rock}
+
+La estribera que sirve de inspiración y referencia geométrica para este proyecto es la
+\textbf{S3 Hard Rock}, fabricada por la empresa española \textbf{S3 Parts}, compañía con
+sede en Barcelona y especializada en componentes de alto rendimiento para trial y enduro.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.62\textwidth]{estribera_ref_S3_Hard_Rock.jpg}
+  \caption{Estribera S3 Hard Rock, referencia comercial del proyecto. Fabricada en aluminio
+    mecanizado CNC con acabado anodizado, destaca por su superficie de dientes agresivos
+    que garantizan el agarre del piloto incluso en condiciones de barro o lluvia.}
+  \label{fig:s3_hard_rock}
+\end{figure}
+
+Las características técnicas y de diseño más relevantes de la S3 Hard Rock que han
+orientado las decisiones de este proyecto son las siguientes:
+
+\begin{itemize}[leftmargin=1.5cm]
+  \item \textbf{Material:} aluminio de alta resistencia mecanizado CNC, con acabado
+    anodizado para protección frente a la corrosión y al desgaste superficial.
+  \item \textbf{Geometría de los dientes:} perfil agresivo con picos pronunciados que
+    maximizan el agarre de la bota del piloto. Esta geometría de dientes fue adoptada como
+    punto de partida en el modelado CAD del presente proyecto.
+  \item \textbf{Sistema de fijación:} anclaje mediante tornillo M10, idéntico al utilizado
+    en las condiciones de contorno del análisis FEM (véase §\,\ref{tab:fem_params}).
+  \item \textbf{Tope lateral:} saliente estructural que impide el movimiento lateral de la
+    estribera en la dirección transversal al eje de la moto, presente también en el
+    modelo CAD desarrollado.
+  \item \textbf{Peso:} alrededor de \textbf{95--110\,g} por unidad, rango que coincide con
+    los valores de masa obtenidos en las 27 variantes del dataset
+    (91{,}7--132{,}3\,g, según Cuadro~\ref{tab:variables}).
+  \item \textbf{Precio de mercado:} entre \textbf{80 y 120\,EUR} por par (40--60\,EUR
+    unidad), frente al coste de fabricación calculado en este proyecto de 12--18\,EUR,
+    lo que ilustra el alto margen añadido por el proceso de diseño, anodizado, embalaje
+    y distribución comercial.
+\end{itemize}
+
+El objetivo de este proyecto no es replicar exactamente la S3 Hard Rock, sino tomar
+sus proporciones y filosofía de diseño como punto de partida para, a través de la
+metodología CAD-FEM-CAM-ML, explorar el espacio de diseño y encontrar la combinación
+geométrica que mejor equilibra resistencia, peso y coste de fabricación, sin depender
+de costoso software comercial ni de ciclos de prototipado físico.
 
 \subsection{Requisitos técnicos y condiciones de contorno}
 
